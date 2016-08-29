@@ -11,7 +11,7 @@ public class AsyncPersonCommandTest {
     @Test
     public void should_return_person_async() {
         Person juntao = new Person("Juntao", 31);
-        AsyncPersonCommand asyncPersonCommand = new AsyncPersonCommand(juntao);
+        ObservablePersonCommand asyncPersonCommand = new ObservablePersonCommand(juntao);
         Observable<Person> observe = asyncPersonCommand.observe();
 
         assertThat(observe.toBlocking().first(), is(juntao));

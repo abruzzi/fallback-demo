@@ -5,10 +5,10 @@ import com.netflix.hystrix.HystrixObservableCommand;
 import com.thoughtworks.fallback.domain.Person;
 import rx.Observable;
 
-public class AsyncPersonCommand extends HystrixObservableCommand<Person>{
+public class ObservablePersonCommand extends HystrixObservableCommand<Person>{
     private Person person;
 
-    protected AsyncPersonCommand(Person person) {
+    protected ObservablePersonCommand(Person person) {
         super(HystrixCommandGroupKey.Factory.asKey("person"));
         this.person = person;
     }
