@@ -15,6 +15,7 @@ public class PersonCommandTest {
 
         Person result = personCommand.execute();
 
+        System.err.println(result);
         assertThat(result.getName(), is(juntao.getName()));
         assertThat(result.getAge(), is(juntao.getAge()));
     }
